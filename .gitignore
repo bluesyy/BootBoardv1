@@ -208,3 +208,8 @@ gradle-app.setting
 
 # End of https://www.toptal.com/developers/gitignore/api/gradle
 
+#수동추가
+
+*.xml
+*.bin
+*.lock
