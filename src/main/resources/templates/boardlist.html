@@ -14,6 +14,7 @@
 <body>
   <div class="layout">
 
+    <a th:href="@{/board/write}">글 작성</a>
     <table>
       <thead>
         <tr>
@@ -30,6 +31,11 @@
         </tr>
       </tbody>
     </table>
+
+    <th:block th:each="page : ${#numbers.sequence(startPage, endPage)}">
+      <a th:if="${page != nowPage}" th:href="@{/board/list(page = ${page - 1})}" th:text="${page}"></a>
+      <a th:if="${page == nowPage}" th:text="${page}" style="color: red"></a>
+    </th:block>
   </div>
 </body>
 </html>
