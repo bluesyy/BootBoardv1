@@ -27,9 +27,10 @@
 </style>
 <body>
   <div class="layout">
-    <form action="/board/writepro" method="post">
+    <form action="/board/writepro" method="post" enctype="multipart/form-data">
       <input name="title" type="text">
       <textarea name="content"></textarea>
+      <input type="file" name="file">   <!-- name 값과 매개변수 이름값을 일치시켜야 함-->
       <button type="submit">작성</button>
     </form>
   </div>
