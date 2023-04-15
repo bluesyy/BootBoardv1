@@ -22,6 +22,7 @@
         </tr>
       </thead>
       <tbody>
+        <a th:href="@{/board/write}">글 작성</a>
         <tr th:each="board : ${list}">
           <td th:text="${board.id}"></td>
           <td>
